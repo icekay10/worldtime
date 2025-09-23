@@ -1,0 +1,149 @@
+/* PolicyPage.css */
+.policy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+}
+
+.policy-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.policy-header {
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.policy-title {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.policy-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0.5rem 0 0;
+  font-weight: 300;
+}
+
+.policy-content {
+  padding: 2.5rem;
+}
+
+.policy-section {
+  margin-bottom: 2.5rem;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section-title {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.policy-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #4cc9f0 0%, #4895ef 100%);
+}
+
+.policy-text {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.policy-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.policy-home-link {
+  color: #4895ef;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.policy-home-link:hover {
+  color: #2a2f36;
+}
+
+.policy-effective-date {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .policy-container {
+    padding: 1rem;
+  }
+  
+  .policy-header {
+    padding: 1.8rem;
+  }
+  
+  .policy-title {
+    font-size: 1.8rem;
+  }
+  
+  .policy-content {
+    padding: 1.8rem;
+  }
+  
+  .policy-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-title {
+    font-size: 1.5rem;
+  }
+  
+  .policy-section-title {
+    font-size: 1.2rem;
+  }
+  
+  .policy-text {
+    font-size: 1rem;
+  }
+}

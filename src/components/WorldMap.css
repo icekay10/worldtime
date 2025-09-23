@@ -1,0 +1,62 @@
+.world-map-container {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.map-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.world-map {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.base-map {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.country-highlight {
+  position: absolute;
+  background-color: rgba(67, 97, 238, 0.3);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.country-highlight.active {
+  background-color: rgba(67, 97, 238, 0.6);
+  width: 24px;
+  height: 24px;
+}
+
+/* Country positions on the map (simplified - you'll need to adjust these) */
+.country-highlight.us { top: 30%; left: 20%; }
+.country-highlight.gb { top: 25%; left: 48%; }
+.country-highlight.de { top: 30%; left: 52%; }
+.country-highlight.fr { top: 30%; left: 50%; }
+.country-highlight.jp { top: 30%; left: 80%; }
+.country-highlight.cn { top: 35%; left: 75%; }
+.country-highlight.in { top: 40%; left: 70%; }
+.country-highlight.au { top: 65%; left: 85%; }
+.country-highlight.br { top: 60%; left: 30%; }
+.country-highlight.za { top: 60%; left: 55%; }
+.country-highlight.ru { top: 20%; left: 65%; }
+.country-highlight.ca { top: 20%; left: 15%; }
+.country-highlight.mx { top: 35%; left: 15%; }
+.country-highlight.sg { top: 45%; left: 75%; }
+.country-highlight.kr { top: 35%; left: 78%; }
+.country-highlight.ae { top: 40%; left: 60%; }
+.country-highlight.sa { top: 40%; left: 58%; }
+.country-highlight.eg { top: 40%; left: 55%; }
+.country-highlight.ng { top: 45%; left: 52%; }

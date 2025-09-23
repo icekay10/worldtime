@@ -1,0 +1,91 @@
+.country-search {
+  width: 100%;
+  max-width: 600px;
+  flex-grow: 1;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 1rem 1.5rem 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s;
+}
+
+.search-container input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  box-shadow: var(--card-shadow);
+  z-index: 100;
+  margin-top: 5px;
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f7fa;
+}
+
+.dropdown-item .flag {
+  font-size: 1.5rem;
+}
+
+.dropdown-item .name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item.country {
+  font-weight: 600;
+}
+
+.dropdown-item.city {
+  padding-left: 3.5rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .search-container input {
+    padding: 0.8rem 1.2rem 0.8rem 2.8rem;
+  }
+  
+  .search-icon {
+    left: 1.2rem;
+  }
+}

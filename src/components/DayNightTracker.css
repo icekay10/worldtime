@@ -1,0 +1,594 @@
+/* Base Styles - Clean, Modern & Readable */
+:root {
+  /* Day Theme */
+  --day-bg: #f8fdff;
+  --day-card: #f0f9ff;
+  --day-text: #1a1a2e;
+  --day-text-secondary: #4a5568;
+  --day-accent: #00a8ff;
+  --day-accent-hover: #008fd5;
+
+  /* Night Theme */
+  --night-bg: #0a0f2c;
+  --night-card: #141a3a;
+  --night-text: #e6f1ff;
+  --night-text-secondary: #a0b8d8;
+  --night-accent: #4d8cff;
+  --night-accent-hover: #6ea8ff;
+
+  /* Typography & Layout */
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --border-radius: 12px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--day-bg);
+  color: var(--day-text);
+  line-height: 1.55;
+  font-size: 14px; /* Reduced base size */
+  transition: var(--transition);
+}
+
+/* Theme Styles */
+.app-container.night {
+  background-color: var(--night-bg);
+  color: var(--night-text);
+}
+
+/* Layout */
+.app-container {
+  min-height: 100vh;
+  padding: var(--spacing-lg);
+  transition: var(--transition);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  font-size: 1.7rem; /* Slightly reduced */
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(90deg, var(--day-accent), #0066cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.night .app-header h1 {
+  background: linear-gradient(90deg, var(--night-accent), #7ca4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header p {
+  font-size: 0.9rem; /* Reduced */
+  color: var(--day-text-secondary);
+}
+
+.night .app-header p {
+  color: var(--night-text-secondary);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg);
+  padding: 0 1rem;
+}
+
+.current-time {
+  font-size: 0.8rem; /* Reduced */
+  color: var(--day-text-secondary);
+  font-weight: 500;
+}
+
+.night .current-time {
+  color: var(--night-text-secondary);
+}
+
+/* Search Section */
+.search-section {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg);
+  position: relative;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem; /* Adjusted padding */
+  font-size: 0.9rem; /* Reduced */
+  border: 2px solid #d0e7f9;
+  border-radius: var(--border-radius);
+  outline: none;
+  background-color: #ffffff;
+  color: var(--day-text);
+  transition: var(--transition);
+}
+
+.night .search-input {
+  background-color: #1a2040;
+  border-color: #3a4a70;
+  color: var(--night-text);
+}
+
+.search-input:focus {
+  border-color: var(--day-accent);
+  box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.2);
+}
+
+.night .search-input:focus {
+  border-color: var(--night-accent);
+  box-shadow: 0 0 0 3px rgba(77, 140, 255, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--day-accent);
+  font-size: 0.95rem; /* Reduced */
+}
+
+.night .search-icon {
+  color: var(--night-accent);
+}
+
+.search-results {
+  position: absolute;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  z-index: 10;
+  border: 1px solid #d0e7f9;
+  font-size: 0.9rem; /* Reduced */
+}
+
+.night .search-results {
+  background: var(--night-card);
+  box-shadow: var(--shadow-dark);
+  border: 1px solid #3a4a70;
+}
+
+.search-result-item {
+  padding: 0.7rem 1rem; /* Adjusted padding */
+  cursor: pointer;
+  transition: var(--transition);
+  border-bottom: 1px solid #edf5fc;
+  color: var(--day-text);
+}
+
+.night .search-result-item {
+  border-bottom: 1px solid #242b50;
+  color: var(--night-text);
+}
+
+.search-result-item:hover {
+  background-color: #e6f7ff;
+  color: var(--day-text);
+}
+
+.night .search-result-item:hover {
+  background-color: #1e2850;
+  color: #ffffff;
+}
+
+.capital {
+  font-size: 0.75rem; /* Reduced */
+  color: var(--day-text-secondary);
+  opacity: 0.9;
+  margin-left: 0.4rem;
+}
+
+.night .capital {
+  color: var(--night-text-secondary);
+}
+
+/* Country Cards */
+.selected-countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.country-card {
+  background: var(--day-card);
+  border-radius: var(--border-radius);
+  padding: 1.2rem; /* Adjusted padding */
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border-left: 5px solid var(--day-accent);
+  color: var(--day-text);
+  backdrop-filter: blur(4px);
+}
+
+.night .country-card {
+  background: var(--night-card);
+  box-shadow: var(--shadow-dark);
+  border-left-color: var(--night-accent);
+  color: var(--night-text);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.card-header h2 {
+  font-size: 1.1rem; /* Reduced */
+  font-weight: 600;
+  color: var(--day-text);
+  line-height: 1.3;
+}
+
+.night .card-header h2 {
+  color: var(--night-text);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.15rem; /* Reduced */
+  cursor: pointer;
+  opacity: 0.7;
+  transition: var(--transition);
+  color: var(--day-text);
+  padding: 0.1rem 0.2rem;
+}
+
+.night .close-btn {
+  color: var(--night-text);
+  opacity: 0.8;
+}
+
+.close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: var(--day-accent);
+}
+
+.night .close-btn:hover {
+  color: var(--night-accent);
+}
+
+/* Time Info */
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem; /* Reduced */
+}
+
+.local-time,
+.timezone {
+  flex: 1;
+}
+
+.label {
+  font-size: 0.7rem; /* Reduced */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--day-text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.night .label {
+  color: var(--night-text-secondary);
+}
+
+.time {
+  font-size: 1.1rem; /* Reduced */
+  font-weight: bold;
+  color: var(--day-text);
+}
+
+.night .time {
+  color: var(--night-text);
+}
+
+.value {
+  font-size: 0.85rem; /* Reduced */
+  color: var(--day-text);
+}
+
+.night .value {
+  color: var(--night-text);
+}
+
+/* Day/Night Tracker */
+.day-night-tracker {
+  margin-bottom: var(--spacing-md);
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem; /* Reduced */
+}
+
+.status {
+  font-weight: 600;
+  color: var(--day-accent);
+}
+
+.night .status {
+  color: var(--night-accent);
+}
+
+.remaining {
+  color: var(--day-text-secondary);
+  opacity: 0.9;
+}
+
+.night .remaining {
+  color: var(--night-text-secondary);
+}
+
+.progress-bar {
+  height: 7px; /* Reduced */
+  background: #e6f7ff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.night .progress-bar {
+  background: #1e2850;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--day-accent);
+  transition: width 1s ease;
+}
+
+.night .progress-fill {
+  background: var(--night-accent);
+}
+
+/* Season Times */
+.season-times h3 {
+  font-size: 0.9rem; /* Reduced */
+  margin-bottom: 0.5rem;
+  color: var(--day-text);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.night .season-times h3 {
+  color: var(--night-text);
+}
+
+.time-pair {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem; /* Reduced */
+  margin-bottom: 0.35rem;
+  color: var(--day-text-secondary);
+}
+
+.night .time-pair {
+  color: var(--night-text-secondary);
+}
+
+/* All Seasons */
+.all-seasons h4 {
+  font-size: 0.85rem; /* Reduced */
+  margin-bottom: 0.5rem;
+  color: var(--day-text);
+  font-weight: 600;
+}
+
+.night .all-seasons h4 {
+  color: var(--night-text);
+}
+
+.season-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.season-item {
+  font-size: 0.8rem; /* Reduced */
+  color: var(--day-text-secondary);
+}
+
+.night .season-item {
+  color: var(--night-text-secondary);
+}
+
+.season-name {
+  font-weight: 600;
+  color: var(--day-text);
+  text-transform: capitalize;
+}
+
+.night .season-name {
+  color: var(--night-text);
+}
+
+/* Emoji styling */
+.emoji {
+  font-size: 1.1em; /* Reduced */
+  margin-right: 0.3rem;
+  vertical-align: -0.1em;
+}
+
+.night .emoji {
+  filter: brightness(1.4);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: inline-flex;
+  gap: 0.4rem;
+  border: 1px solid #d0e7f9;
+  border-radius: 30px;
+  padding: 0.25rem;
+  background: #ffffff;
+  font-size: 0.8rem; /* Reduced */
+}
+
+.night .theme-toggle {
+  background: #1a2040;
+  border-color: #3a4a70;
+}
+
+.theme-toggle button {
+  padding: 0.35rem 0.8rem; /* Adjusted padding */
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  background: transparent;
+  color: var(--day-text-secondary);
+  font-weight: 500;
+  font-size: 0.75rem; /* Reduced */
+}
+
+.theme-toggle button.active {
+  background: var(--day-accent);
+  color: white;
+}
+
+.night .theme-toggle button {
+  color: var(--night-text-secondary);
+}
+
+.night .theme-toggle button.active {
+  background: var(--night-accent);
+  color: white;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--day-text-secondary);
+  font-size: 0.85rem; /* Reduced */
+}
+
+.night .empty-state {
+  color: var(--night-text-secondary);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem; /* Reduced */
+  color: var(--day-text-secondary);
+}
+
+.night .app-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--night-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 13px; /* Reduced */
+  }
+
+  .app-container {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem; /* Reduced */
+  }
+
+  .app-header p {
+    font-size: 0.85rem; /* Reduced */
+  }
+
+  .selected-countries {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .theme-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .country-card {
+    padding: 1rem; /* Reduced */
+  }
+
+  .card-header h2 {
+    font-size: 1rem; /* Reduced */
+  }
+}
+
+@media (max-width: 480px) {
+  .time-info {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .search-input {
+    padding: 0.75rem 0.9rem 0.75rem 2.8rem; /* Adjusted padding */
+    font-size: 0.85rem; /* Reduced */
+  }
+
+  .search-result-item {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem; /* Reduced */
+  }
+
+  .label {
+    font-size: 0.65rem; /* Reduced */
+  }
+
+  .time {
+    font-size: 1rem; /* Reduced */
+  }
+
+  .theme-toggle button {
+    font-size: 0.7rem; /* Reduced */
+    padding: 0.3rem 0.6rem; /* Adjusted padding */
+  }
+}

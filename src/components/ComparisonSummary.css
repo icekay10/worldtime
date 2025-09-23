@@ -1,0 +1,70 @@
+.comparison-summary {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.comparison-summary h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.difference-card {
+  background-color: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.difference-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.flags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.names {
+  text-align: center;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.difference {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .comparison-summary {
+    padding: 1.5rem;
+  }
+  
+  .difference-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .difference-grid {
+    grid-template-columns: 1fr;
+  }
+}

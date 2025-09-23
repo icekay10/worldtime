@@ -1,0 +1,198 @@
+/* components/BlogPost.css */
+.bp-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.bp-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.bp-header {
+  padding: 2rem;
+  background: #f1f8ff;
+  border-bottom: 1px solid #e0e7ff;
+}
+
+.bp-icon-category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.bp-icon {
+  font-size: 2.5rem;
+}
+
+.category-tag {
+  background: rgba(58, 123, 213, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.bp-title {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+  color: #2c3e50;
+  line-height: 1.3;
+}
+
+.bp-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.bp-content {
+  padding: 2rem;
+}
+
+/* Key Takeaways Section */
+.bp-key-points {
+  background: #f8f9fa;
+  border-left: 4px solid #3a7bd5;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.bp-key-points h3 {
+  margin-top: 0;
+  color: #3a7bd5;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Bullet List Styling */
+.bp-takeaways-list {
+  margin: 0;
+  padding-left: 1.4rem;
+  list-style: disc;
+  color: #444;
+}
+
+.bp-takeaway-item {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ensure bullets are visible and properly indented */
+.bp-takeaways-list {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+/* Override any reset styles */
+.bp-takeaways-list li::marker {
+  color: #3a7bd5;
+  font-size: 1.2em;
+}
+
+/* Main Content */
+.bp-full-content {
+  line-height: 1.7;
+}
+
+.bp-full-content h1 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.bp-full-content p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Footer */
+.bp-footer {
+  padding: 1.5rem 2rem;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+
+.read-more {
+  color: #3a7bd5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #2c5fb3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bp-container {
+    padding: 1rem;
+  }
+
+  .bp-card {
+    border-radius: 8px;
+  }
+
+  .bp-header,
+  .bp-content,
+  .bp-footer {
+    padding: 1.5rem;
+  }
+
+  .bp-title {
+    font-size: 1.6rem;
+  }
+
+  .bp-icon {
+    font-size: 2rem;
+  }
+
+  .bp-key-points {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .bp-key-points h3 {
+    font-size: 1.1rem;
+  }
+
+  .bp-takeaways-list {
+    padding-left: 1.2rem;
+  }
+
+  .bp-takeaway-item {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bp-icon-category {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bp-title {
+    font-size: 1.5rem;
+  }
+
+  .bp-takeaways-list {
+    padding-left: 1rem;
+  }
+
+  .bp-takeaway-item {
+    font-size: 0.9rem;
+  }
+}
