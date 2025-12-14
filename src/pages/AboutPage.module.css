@@ -1,0 +1,222 @@
+.aboutPage {
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #fff;
+  background: #0f0f1b;
+  min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #f80759);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  margin-top: 1rem;
+  opacity: 0.9;
+  color: #e0e0ff;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Live Time Card */
+.liveTimeCardSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.liveTimeCard {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.liveTimeCard:hover {
+  transform: translateY(-6px);
+}
+
+.cardHeader {
+  padding: 1.25rem 1.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.flag {
+  font-size: 1.8rem;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.cardBody {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.currentTime {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin: 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.currentDate {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* Features */
+.featuresSection {
+  margin-bottom: 3rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+}
+
+.featureCard {
+  background: rgba(30, 30, 60, 0.5);
+  padding: 1.75rem;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  background: rgba(40, 40, 80, 0.6);
+}
+
+.featureIcon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  margin: 0.75rem 0;
+  color: #ffffff;
+}
+
+.featureCard p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* Vision */
+.visionSection {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.visionQuote {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  color: #ffffff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visionAuthor {
+  font-size: 1.1rem;
+  margin-top: 1.25rem;
+  opacity: 0.8;
+  color: #b0b0ff;
+}
+
+/* CTA */
+.ctaSection {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.ctaTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.5);
+}
+
+.ctaButton:focus-visible {
+  outline: 2px solid #00d2ff;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .liveTimeCard {
+    max-width: 100%;
+  }
+
+  .featureCard {
+    padding: 1.25rem;
+  }
+}

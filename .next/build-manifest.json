@@ -1,0 +1,113 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-42372ed130431b0a.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/ReJMN7OQn5LFbJfY5WSQS/_buildManifest.js",
+    "static/ReJMN7OQn5LFbJfY5WSQS/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/fb7157b00fa2027c.css",
+      "static/chunks/pages/index-3846ec54664cd56d.js"
+    ],
+    "/404": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/fc44b323546b04d2.css",
+      "static/chunks/pages/404-fd2884a3a411590b.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/1459e663f2ed7b7a.css",
+      "static/chunks/pages/_app-ea58e6d21b70b1be.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/chunks/pages/_error-cf5db1610f7a1281.js"
+    ],
+    "/about": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/c52710da352bda5f.css",
+      "static/chunks/pages/about-ba473b53a4bace71.js"
+    ],
+    "/comparisonsummary": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/54c3b4c0d66eb7d5.css",
+      "static/chunks/pages/comparisonsummary-551b48de0efcebe7.js"
+    ],
+    "/contact": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/833993f9facf00cc.css",
+      "static/chunks/pages/contact-1746525b488c28d7.js"
+    ],
+    "/countrycard": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/1dd83243cdc74e58.css",
+      "static/chunks/pages/countrycard-326dc8e8d842da56.js"
+    ],
+    "/countrysearch": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/185aee323c2d9541.css",
+      "static/chunks/pages/countrysearch-c38b5fb84ea59f9a.js"
+    ],
+    "/countryselector": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/c982645e60e86992.css",
+      "static/chunks/pages/countryselector-a1c0bb18e2ee27af.js"
+    ],
+    "/global-day-and-night-tracker-world-clock": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/b50f246914472a3f.css",
+      "static/chunks/pages/global-day-and-night-tracker-world-clock-898348493cb94cfc.js"
+    ],
+    "/policy-page": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/aa6ca299ac961992.css",
+      "static/chunks/pages/policy-page-11aeff5898847a04.js"
+    ],
+    "/timedisplay": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/016517c13a548ff7.css",
+      "static/chunks/pages/timedisplay-f361e84bd780903b.js"
+    ],
+    "/world-clock-comparison-tool": [
+      "static/chunks/webpack-3670af3cb0bf9ccc.js",
+      "static/chunks/framework-b1e5f14688f9ffe6.js",
+      "static/chunks/main-29d5dd340ab278db.js",
+      "static/css/6dbe85ebaa5d3913.css",
+      "static/chunks/pages/world-clock-comparison-tool-61a4de66ec46b7c1.js"
+    ]
+  },
+  "ampFirstPages": []
+}

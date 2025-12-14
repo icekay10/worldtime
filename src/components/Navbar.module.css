@@ -1,0 +1,216 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 15, 27, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 0.8rem 0;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 20, 0.96);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  transition: opacity 0.2s ease;
+}
+
+.navbarLogo:hover {
+  opacity: 0.9;
+}
+
+.logoIcon {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.logoText {
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #f80759);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Desktop Navigation */
+.navbarLinks {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.navLink {
+  color: #b8b8ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.navLink:hover::before {
+  opacity: 1;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid #00d2ff;
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Mobile Toggle */
+.navbarToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.toggleBar {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbarToggle.active .toggleBar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbarToggle.active .toggleBar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarToggle.active .toggleBar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Overlay */
+.mobileOverlay {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbarLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 320px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    background: rgba(10, 10, 20, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    gap: 0;
+    z-index: 999;
+  }
+
+  .navbarLinks.active {
+    right: 0;
+  }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.15rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navLink::before {
+    display: none;
+  }
+
+  .navLink:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .navbarToggle {
+    display: flex;
+  }
+
+  .mobileOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbarLinks {
+    gap: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

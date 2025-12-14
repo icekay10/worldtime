@@ -1,0 +1,17 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/about": "pages/about.html",
+  "/404": "pages/404.html",
+  "/comparisonsummary": "pages/comparisonsummary.html",
+  "/contact": "pages/contact.html",
+  "/countrycard": "pages/countrycard.html",
+  "/countrysearch": "pages/countrysearch.html",
+  "/countryselector": "pages/countryselector.html",
+  "/": "pages/index.html",
+  "/policy-page": "pages/policy-page.html",
+  "/global-day-and-night-tracker-world-clock": "pages/global-day-and-night-tracker-world-clock.html",
+  "/timedisplay": "pages/timedisplay.html",
+  "/world-clock-comparison-tool": "pages/world-clock-comparison-tool.html"
+}

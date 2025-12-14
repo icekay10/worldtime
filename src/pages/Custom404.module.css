@@ -1,0 +1,768 @@
+/* ===== BASE STYLES ===== */
+.errorPage {
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #fff;
+  background: #0f0f1b;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.5rem 0;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  width: 100%;
+}
+
+.heroTitle {
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff9966);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.heroSubtitle {
+  font-size: clamp(0.875rem, 3vw, 1.1rem);
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+  color: #e0e0ff;
+  max-width: 800px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== LIVE TIME CARD ===== */
+.liveTimeCardSection {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 2rem;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.liveTimeCard {
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 75, 43, 0.25);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.liveTimeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(255, 75, 43, 0.35);
+}
+
+.cardHeader {
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flag {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  text-align: center;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 200px;
+}
+
+.cardBody {
+  padding: 0.5rem 1rem 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.currentTime {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: 800;
+  margin: 0.25rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.currentDate {
+  font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+  opacity: 0.95;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+
+/* ===== SECTION TITLES ===== */
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: #ffffff;
+  line-height: 1.3;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+/* ===== FEATURES/NAVIGATION SECTION ===== */
+.featuresSection {
+  margin: 0.5rem 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: 100%;
+}
+
+.featureCard {
+  background: rgba(30, 30, 60, 0.6);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 160px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  background: rgba(40, 40, 80, 0.7);
+  border-color: rgba(255, 75, 43, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 75, 43, 0.2);
+}
+
+.featureIcon {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.featureCard h3 {
+  font-size: clamp(1rem, 2.8vw, 1.2rem);
+  margin: 0.25rem 0;
+  color: #ffffff;
+  line-height: 1.3;
+  width: 100%;
+}
+
+.featureCard p {
+  font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+  opacity: 0.9;
+  line-height: 1.4;
+  margin: 0.5rem 0 0;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* ===== TIPS SECTION ===== */
+.tipsSection {
+  margin: 0.5rem 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: 100%;
+}
+
+.tipCard {
+  background: rgba(40, 30, 60, 0.6);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 160px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tipCard:hover {
+  transform: translateY(-4px);
+  background: rgba(50, 40, 70, 0.7);
+  box-shadow: 0 8px 20px rgba(255, 75, 43, 0.15);
+}
+
+.tipIcon {
+  font-size: clamp(1.6rem, 3.5vw, 1.9rem);
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.tipCard h3 {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  margin: 0.25rem 0;
+  color: #ffffff;
+  line-height: 1.3;
+  width: 100%;
+}
+
+.tipCard p {
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  opacity: 0.9;
+  line-height: 1.4;
+  margin: 0.5rem 0 0;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* ===== VISION SECTION ===== */
+.visionSection {
+  text-align: center;
+  margin: 0.5rem 0 2rem;
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visionQuote {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+  color: #ffffff;
+  max-width: 900px;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visionAuthor {
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  margin-top: 0.75rem;
+  opacity: 0.85;
+  color: #b0b0ff;
+  width: 100%;
+}
+
+/* ===== CTA SECTION ===== */
+.ctaSection {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ctaTitle {
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  line-height: 1.3;
+  width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2vw, 0.9rem) clamp(1.5rem, 4vw, 2.25rem);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 75, 43, 0.3);
+  border: none;
+  cursor: pointer;
+  min-width: clamp(150px, 40vw, 200px);
+  max-width: 300px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 75, 43, 0.5);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+.ctaButton:focus-visible {
+  outline: 3px solid rgba(255, 75, 43, 0.6);
+  outline-offset: 3px;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.featureCard:focus-visible {
+  outline: 3px solid rgba(255, 75, 43, 0.6);
+  outline-offset: 3px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Extra Small Devices (Phones, < 375px) */
+@media (max-width: 374px) {
+  .errorPage {
+    padding: 0.75rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  
+  .heroSubtitle {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+  
+  .liveTimeCard {
+    min-width: 260px;
+  }
+  
+  .cardTitle {
+    font-size: 0.95rem;
+    min-width: 180px;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 140px;
+    padding: 0.875rem;
+  }
+  
+  .visionQuote {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+  
+  .ctaButton {
+    min-width: 140px;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Devices (Phones, 375px - 479px) */
+@media (min-width: 375px) and (max-width: 479px) {
+  .errorPage {
+    padding: 0.875rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Medium Devices (Tablets, 480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .errorPage {
+    padding: 1rem 1.25rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 170px;
+  }
+}
+
+/* Large Devices (Tablets/Laptops, 768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .errorPage {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 180px;
+  }
+  
+  .visionQuote {
+    font-size: 1.25rem;
+  }
+}
+
+/* Extra Large Devices (Laptops/Desktops, 1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .errorPage {
+    padding: 1.5rem 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra Extra Large Devices (Large Desktops, 1280px+) */
+@media (min-width: 1280px) {
+  .errorPage {
+    padding: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 190px;
+    padding: 1.75rem;
+  }
+  
+  .visionQuote {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+/* ===== ORIENTATION & HEIGHT-BASED ADJUSTMENTS ===== */
+
+/* Portrait - Tall Screens */
+@media (min-height: 800px) and (orientation: portrait) {
+  .heroContent {
+    min-height: 180px;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 200px;
+  }
+  
+  .visionSection {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Portrait - Short Screens */
+@media (max-height: 600px) and (orientation: portrait) {
+  .errorPage {
+    padding: 0.5rem 1rem;
+  }
+  
+  .hero {
+    margin: 0.25rem 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    gap: 0.75rem;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 140px;
+    padding: 0.875rem;
+  }
+}
+
+/* Landscape - All Screens */
+@media (orientation: landscape) {
+  .errorPage {
+    padding: 0.75rem 1rem;
+  }
+  
+  .hero {
+    margin: 0.25rem 0 1rem;
+  }
+  
+  .heroTitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+  }
+  
+  .heroSubtitle {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+  
+  .liveTimeCardSection {
+    margin: 0.25rem 0 1.5rem;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Landscape - Short Screens */
+@media (max-height: 500px) and (orientation: landscape) {
+  .heroSubtitle {
+    display: none;
+  }
+  
+  .liveTimeCard {
+    max-width: 400px;
+  }
+  
+  .featuresGrid,
+  .tipsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .featureCard,
+  .tipCard {
+    min-height: 130px;
+    padding: 0.75rem;
+  }
+  
+  .featureIcon,
+  .tipIcon {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featureCard h3,
+  .tipCard h3 {
+    font-size: 0.9rem;
+    margin: 0.125rem 0;
+  }
+  
+  .featureCard p,
+  .tipCard p {
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+  }
+  
+  .visionSection {
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .visionQuote {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== SPECIAL CASES ===== */
+
+/* iOS Safari Fix */
+@supports (-webkit-touch-callout: none) {
+  .errorPage {
+    min-height: -webkit-fill-available;
+  }
+  
+  .featureCard,
+  .tipCard {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Windows High Contrast Mode */
+@media (forced-colors: active) {
+  .heroTitle {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: LinkText;
+  }
+  
+  .featureCard,
+  .tipCard {
+    border: 2px solid CanvasText;
+  }
+  
+  .ctaButton {
+    border: 2px solid CanvasText;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .liveTimeCard,
+  .featureCard,
+  .tipCard,
+  .ctaButton {
+    transition: none;
+  }
+  
+  .liveTimeCard:hover,
+  .featureCard:hover,
+  .tipCard:hover,
+  .ctaButton:hover {
+    transform: none;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .errorPage {
+    background: #0a0a15;
+  }
+  
+  .featureCard {
+    background: rgba(25, 25, 45, 0.7);
+  }
+  
+  .featureCard:hover {
+    background: rgba(35, 35, 55, 0.8);
+  }
+  
+  .tipCard {
+    background: rgba(35, 25, 55, 0.7);
+  }
+  
+  .tipCard:hover {
+    background: rgba(45, 35, 65, 0.8);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .errorPage {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .heroTitle {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: black !important;
+  }
+  
+  .featureCard,
+  .tipCard {
+    border: 1px solid #ccc !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+  
+  .ctaButton {
+    display: none !important;
+  }
+}

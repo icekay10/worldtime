@@ -1,39 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+'use client';
+
+import Link from 'next/link';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-brand">
-          <div className="footer-logo">
-            <span className="footer-logo-icon">🌎</span>
-            <h3 className="footer-heading">World Time Explorer</h3>
+    <footer className={styles.footer}>
+      <div className={styles.footerContainer}>
+        {/* Brand Section */}
+        <div className={styles.footerBrand}>
+          <div className={styles.footerLogo}>
+            <span className={styles.footerLogoIcon} aria-hidden="true">
+              🌎
+            </span>
+            <h3 className={styles.footerHeading}>World Time Explorer</h3>
           </div>
-          <p className="footer-text">
+          <p className={styles.footerText}>
             Compare time zones across the globe with beautiful, interactive cards
           </p>
         </div>
-        
-        <div className="footer-links-section">
-          <h4 className="footer-subheading">Quick Links</h4>
-          <ul className="footer-links">
-            <li><Link to="/" className="footer-link">Home</Link></li>
-            <li><Link to="/world-clock-comparison-tool" className="footer-link">Time Comparator</Link></li>
-            <li><Link to="/contact" className="footer-link">Contact</Link></li>
-            <li><Link to="/about" className="footer-link">About</Link></li>
-            <li><Link to="/blog" className="footer-link">Blog</Link></li>
-            <li><Link to="/global-day-and-night-tracker-world-clock" className="footer-link">Day & Night Tracker</Link></li>
-            <li><Link to="/game" className="footer-link">Quiz Game</Link></li>
-            <li><Link to="/policy" className="footer-link">Privacy Policy</Link></li>
+
+        {/* Quick Links */}
+        <div className={styles.footerLinksSection}>
+          <h4 className={styles.footerSubheading}>Quick Links</h4>
+          <ul className={styles.footerLinks}>
+            <li>
+              <Link href="/" className={styles.footerLink} prefetch={false}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/world-clock-comparison-tool"
+                className={styles.footerLink}
+                prefetch={false}
+              >
+                Time Comparator
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className={styles.footerLink} prefetch={false}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className={styles.footerLink} prefetch={false}>
+                About
+              </Link>
+            </li>
+            
+            <li>
+              <Link
+                href="/global-day-and-night-tracker-world-clock"
+                className={styles.footerLink}
+                prefetch={false}
+              >
+                Day & Night Tracker
+              </Link>
+            </li>
+            <li>
+              <Link href="/policy-page" className={styles.footerLink} prefetch={false}>
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
-      
-      <div className="footer-bottom">
+
+      {/* Bottom Bar */}
+      <div className={styles.footerBottom}>
         <p>© {currentYear} World Time Explorer. All rights reserved.</p>
       </div>
     </footer>

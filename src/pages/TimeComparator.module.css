@@ -1,0 +1,399 @@
+.timeComparator {
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #fff;
+  background: #0f0f1b;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-top: 3rem; /* Extra top padding to clear navigation */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-margin-top: 80px; /* Adjust based on your fixed nav height */
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #f80759);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  margin-top: 1rem;
+  opacity: 0.9;
+  color: #e0e0ff;
+  padding: 0 1rem;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+/* Search Box */
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(30, 30, 60, 0.6);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.2);
+}
+
+.suggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #1a1a2e;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.suggestionItem {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: #e0e0ff;
+}
+
+.suggestionItem:hover,
+.suggestionItem:focus {
+  background: rgba(0, 210, 255, 0.15);
+  outline: none;
+}
+
+.trackingCount {
+  color: #a0a0ff;
+  font-size: 0.75rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Cards */
+.countryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.countryCard {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  isolation: isolate;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.countryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cardHeader {
+  padding: 1.25rem 1.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cityName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: white;
+  flex: 1;
+}
+
+.removeButton {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.removeButton:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cardBody {
+  padding: 0 1.5rem 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.currentTime {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  margin: 0.25rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.currentDate {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.25rem;
+}
+
+.capital {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #aaa;
+}
+
+.worldIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #e0e0ff;
+}
+
+.emptyText {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Comparison Summary */
+.comparisonSummary {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.summaryTitle {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.differencesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+.differenceCard {
+  background: rgba(30, 30, 60, 0.6);
+  padding: 1.25rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.differenceCard:hover {
+  background: rgba(50, 50, 90, 0.7);
+  transform: translateY(-2px);
+}
+
+.citiesPair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #e0e0ff;
+}
+
+.differenceValue {
+  font-weight: 700;
+  color: #4ade80;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeComparator {
+    padding: 1.25rem 1rem;
+  }
+
+  .header {
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
+    scroll-margin-top: 70px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .countryContainer {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .differencesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .currentTime {
+    font-size: 1.75rem;
+  }
+
+  .cityName {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeComparator {
+    padding: 1rem 0.75rem;
+  }
+
+  .header {
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 60px;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .countryCard {
+    min-height: 200px;
+  }
+
+  .currentTime {
+    font-size: 1.5rem;
+  }
+}
+
+/* Safe Area Insets */
+@supports(padding: max(0px)) {
+  .timeComparator {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+    padding-top: max(3rem, env(safe-area-inset-top)); /* Increased to ensure visibility */
+  }
+
+  @media (max-width: 768px) {
+    .timeComparator {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+      padding-top: max(2.5rem, env(safe-area-inset-top));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timeComparator {
+      padding-left: max(0.75rem, env(safe-area-inset-left));
+      padding-right: max(0.75rem, env(safe-area-inset-right));
+      padding-top: max(2rem, env(safe-area-inset-top));
+    }
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .countryCard,
+  .differenceCard {
+    transition: none;
+  }
+
+  .comparisonSummary {
+    animation: none;
+  }
+}

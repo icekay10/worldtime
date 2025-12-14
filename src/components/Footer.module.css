@@ -1,0 +1,168 @@
+.footer {
+  background: linear-gradient(135deg, #0f0f1b, #1a1a2e);
+  color: #e6e6ff;
+  padding: 2.5rem 1.5rem 1.5rem;
+  margin-top: auto;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* Brand Section */
+.footerBrand {
+  text-align: center;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footerLogoIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.footerHeading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #f80759);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footerText {
+  font-size: 1rem;
+  opacity: 0.85;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Links Section */
+.footerLinksSection {
+  text-align: center;
+}
+
+.footerSubheading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.footerLink {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  color: #b0b0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.footerLink:hover,
+.footerLink:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footerLink:hover::before,
+.footerLink:focus::before {
+  opacity: 1;
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid #00d2ff;
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+/* Bottom Bar */
+.footerBottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive: Tablet & Mobile */
+@media (min-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    align-items: start;
+  }
+
+  .footerBrand {
+    text-align: left;
+  }
+
+  .footerLinksSection {
+    text-align: left;
+  }
+
+  .footerLinks {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerLinks {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .footerHeading {
+    font-size: 1.5rem;
+  }
+
+  .footerSubheading {
+    font-size: 1.15rem;
+  }
+
+  .footerLinks {
+    grid-template-columns: 1fr;
+  }
+}
