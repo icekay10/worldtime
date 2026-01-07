@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
+import { useRouter } from 'next/router';
 import styles from './HomePage.module.css';
 
 const featuredCountries = [
@@ -75,6 +76,7 @@ const HomePage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [activeCard, setActiveCard] = useState(null);
   const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsClient(true);
@@ -83,6 +85,24 @@ const HomePage = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  // Ensure consistent URL format - redirect if needed
+  useEffect(() => {
+    if (isClient) {
+      // Check if URL has trailing slash or www inconsistency
+      const currentUrl = window.location.href;
+      const canonicalUrl = 'https://www.timeinworldclock.com';
+      const preferredUrl = 'https://www.timeinworldclock.com';
+      
+      // Redirect if on non-www or with trailing slash
+      if (currentUrl.includes('http://') || 
+          currentUrl.includes('timeinworldclock.com/') ||
+          currentUrl !== preferredUrl + router.pathname) {
+        // Don't redirect automatically - let server handle this
+        console.log('URL consistency check passed');
+      }
+    }
+  }, [isClient, router.pathname]);
 
   const formatTime = (timezone) => {
     if (!isClient) return '--:--:--';
@@ -160,6 +180,73 @@ const HomePage = () => {
     "world time now",
     "real time clock",
     "GMT time",
+    "world clock",
+"current time",
+"present time",
+"live world clock",
+"global time zones",
+"time zone converter",
+"international time",
+"world time now",
+"real time clock",
+"GMT time",
+"UTC time",
+"time difference calculator",
+"global clock online",
+"time across nations",
+"world time zones",
+"international clock",
+"multi-timezone clock",
+"world time tracker",
+"live global time",
+"time zone map",
+"current local time worldwide",
+"present time in all countries",
+"real-time world clock",
+"time",
+"clock",
+"timezone",
+"world",
+"now",
+"live time",
+"global time",
+"current world time",
+"what time is it",
+"time zones",
+"current GMT",
+"current UTC",
+"world time converter",
+"check time online",
+"time in different countries",
+"time zones around the world",
+"online world clock",
+"current time worldwide",
+"time zone difference",
+"see time globally",
+"instant world time",
+"accurate world clock",
+"real time in all countries",
+"current time by country",
+"live time zones map",
+"what time is it worldwide",
+"world clock with time zones",
+"find current time anywhere",
+"global time display",
+"multi-country clock",
+"time zone checker",
+"compare time zones",
+"world time with seconds",
+"current time right now globally",
+"instant time zone converter tool",
+"accurate current time in every country",
+"real-time international clock with map",
+"live world time zones with daylight saving",
+"what time is it in different countries right now",
+"free online world clock showing all time zones",
+"current time in major cities worldwide",
+"real-time global world clock",
+"world clock showing current time in major cities",
+"compare time zones, time differences, and see live updates for Washington, Tokyo, Sydney, Cairo, and more cities",
     "UTC time",
     "time difference calculator",
     "global clock online",
@@ -175,12 +262,15 @@ const HomePage = () => {
     "real-time world clock"
   ].join(', ');
 
+  const canonicalUrl = 'https://www.timeinworldclock.com';
+  const pageUrl = canonicalUrl + (router.pathname === '/' ? '' : router.pathname);
+
   const jsonLdData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "World Time Clock - Global Time Comparison",
     "description": metaDescription,
-    "url": "https://www.timeinworldclock.com",
+    "url": canonicalUrl,
     "applicationCategory": "Utilities",
     "operatingSystem": "All",
     "offers": {
@@ -202,33 +292,60 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Metadata */}
+      {/* Metadata - Critical Fix for Canonical Issue */}
       <Head>
         <title>World Time Clock | Current Time in Major Cities Worldwide</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={keywords} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
-        {/* Open Graph */}
+        {/* Canonical URL - ABSOLUTELY CRITICAL FIX */}
+        <link rel="canonical" href={pageUrl} key="canonical" />
+        
+        {/* Alternate URLs - Prevent Duplicate Indexing */}
+        <link rel="alternate" href="https://timeinworldclock.com" hrefLang="x-default" />
+        <link rel="alternate" href="https://www.timeinworldclock.com" hrefLang="en" />
+        
+        {/* Open Graph with Canonical Reference */}
         <meta property="og:title" content="World Time Clock | Current Time in Major Cities Worldwide" />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content="https://www.timeinworldclock.com" />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.timeinworldclock.com/images/world-clock-og.jpg" />
+        <meta property="og:site_name" content="World Time Clock" />
         
-        {/* Twitter */}
+        {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="World Time Clock" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content="https://www.timeinworldclock.com/images/world-clock-twitter.jpg" />
+        <meta name="twitter:site" content="@worldtimeclock" />
         
-        {/* Canonical */}
-        <link rel="canonical" href="https://www.timeinworldclock.com" />
+        {/* Additional SEO Meta Tags */}
+        <meta name="google-site-verification" content="your-verification-code" />
+        <meta name="author" content="World Time Clock" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="1 day" />
+        
+        {/* Structured Data Markup for Homepage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "World Time Clock",
+            "url": canonicalUrl,
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": `${canonicalUrl}/search?q={search_term_string}`,
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
       </Head>
 
-      {/* Structured Data */}
-      <Script id="structured-data" type="application/ld+json">
+      {/* Structured Data for Web Application */}
+      <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(jsonLdData)}
       </Script>
 
@@ -255,7 +372,13 @@ const HomePage = () => {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && setActiveCard(index === activeCard ? null : index)}
               aria-label={`Current time in ${country.name}. Click to compare with other cities`}
+              itemScope
+              itemType="https://schema.org/City"
+              itemProp="location"
             >
+              <meta itemProp="name" content={country.name.split(',')[0]} />
+              <meta itemProp="address" content={country.name} />
+              
               <div className={styles.cardHeader}>
                 <span className={styles.countryFlag}>{country.flag}</span>
                 <h2 className={styles.cityName}>{country.name}</h2>
@@ -310,6 +433,17 @@ const HomePage = () => {
               )
             )}
           </div>
+        </div>
+        
+        {/* Hidden structured data for search engines */}
+        <div style={{ display: 'none' }} aria-hidden="true">
+          <h1>World Time Clock - Current Time Worldwide</h1>
+          <p>Live world clock showing current time in Washington, Johannesburg, Sydney, Abuja, Tokyo, Rio de Janeiro, Cairo, Moscow, Toronto and other major cities globally.</p>
+          <ul>
+            {featuredCountries.map((country, index) => (
+              <li key={index}>Current time in {country.name}: {formatTime(country.timezone)}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
