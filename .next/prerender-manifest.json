@@ -5,21 +5,7 @@
       "initialRevalidateSeconds": 86400,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/contact.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/about": {
-      "initialRevalidateSeconds": 86400,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/about.json",
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/contact.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -33,49 +19,7 @@
       "initialRevalidateSeconds": 3600,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/index.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/global-day-and-night-tracker-world-clock": {
-      "initialRevalidateSeconds": 3600,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/global-day-and-night-tracker-world-clock.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/world-clock-comparison-tool": {
-      "initialRevalidateSeconds": 3600,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/world-clock-comparison-tool.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/worldclock-time-zone-converter": {
-      "initialRevalidateSeconds": 3600,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/worldclock-time-zone-converter.json",
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/index.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -89,7 +33,63 @@
       "initialRevalidateSeconds": 86400,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/-gmtBD9GbTiJ3ftuSc_ev/policy-page.json",
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/policy-page.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/about": {
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/about.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/global-day-and-night-tracker-world-clock": {
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/global-day-and-night-tracker-world-clock.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/worldclock-time-zone-converter": {
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/worldclock-time-zone-converter.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/world-clock-comparison-tool": {
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/world-clock-comparison-tool.json",
       "allowHeader": [
         "host",
         "x-matched-path",

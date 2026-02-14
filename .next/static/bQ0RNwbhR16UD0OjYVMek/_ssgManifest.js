@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002Fabout","\u002Fcontact","\u002Fglobal-day-and-night-tracker-world-clock","\u002Fpolicy-page","\u002Fworld-clock-comparison-tool","\u002Fworldclock-time-zone-converter"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
