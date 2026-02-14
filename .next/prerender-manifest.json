@@ -1,11 +1,25 @@
 {
   "version": 4,
   "routes": {
+    "/about": {
+      "initialRevalidateSeconds": 86400,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/about.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/contact": {
       "initialRevalidateSeconds": 86400,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/contact.json",
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/contact.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -19,7 +33,7 @@
       "initialRevalidateSeconds": 3600,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/index.json",
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/index.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -33,35 +47,7 @@
       "initialRevalidateSeconds": 86400,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/policy-page.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/about": {
-      "initialRevalidateSeconds": 86400,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/about.json",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/global-day-and-night-tracker-world-clock": {
-      "initialRevalidateSeconds": 3600,
-      "initialExpireSeconds": 31536000,
-      "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/global-day-and-night-tracker-world-clock.json",
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/policy-page.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -75,7 +61,7 @@
       "initialRevalidateSeconds": 3600,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/worldclock-time-zone-converter.json",
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/worldclock-time-zone-converter.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -89,7 +75,21 @@
       "initialRevalidateSeconds": 3600,
       "initialExpireSeconds": 31536000,
       "srcRoute": null,
-      "dataRoute": "/_next/data/bQ0RNwbhR16UD0OjYVMek/world-clock-comparison-tool.json",
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/world-clock-comparison-tool.json",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/global-day-and-night-tracker-world-clock": {
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
+      "srcRoute": null,
+      "dataRoute": "/_next/data/_Wcf14OLRapTLgTAMXwdF/global-day-and-night-tracker-world-clock.json",
       "allowHeader": [
         "host",
         "x-matched-path",

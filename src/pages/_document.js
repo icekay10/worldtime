@@ -24,6 +24,14 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        
+        {/* GoatCounter Script - Added after NextScript */}
+        <script
+          data-goatcounter={`https://${process.env.NEXT_PUBLIC_GOAT_COUNTER_CODE}.goatcounter.com/count`}
+          data-goatcounter-settings='{"allow_local": true}'
+          async
+          src="//gc.zgo.at/count.js"
+        />
       </body>
     </Html>
   );

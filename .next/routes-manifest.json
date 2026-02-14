@@ -150,31 +150,31 @@
   "dataRoutes": [
     {
       "page": "/",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/index\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/index\\.json$"
     },
     {
       "page": "/about",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/about\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/about\\.json$"
     },
     {
       "page": "/contact",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/contact\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/contact\\.json$"
     },
     {
       "page": "/global-day-and-night-tracker-world-clock",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/global-day-and-night-tracker-world-clock\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/global-day-and-night-tracker-world-clock\\.json$"
     },
     {
       "page": "/policy-page",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/policy-page\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/policy-page\\.json$"
     },
     {
       "page": "/world-clock-comparison-tool",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/world-clock-comparison-tool\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/world-clock-comparison-tool\\.json$"
     },
     {
       "page": "/worldclock-time-zone-converter",
-      "dataRouteRegex": "^/_next/data/bQ0RNwbhR16UD0OjYVMek/worldclock-time-zone-converter\\.json$"
+      "dataRouteRegex": "^/_next/data/_Wcf14OLRapTLgTAMXwdF/worldclock-time-zone-converter\\.json$"
     }
   ],
   "rsc": {
