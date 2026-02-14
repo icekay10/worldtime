@@ -25,10 +25,9 @@ export default function Document() {
         <Main />
         <NextScript />
         
-        {/* GoatCounter Script - Added after NextScript */}
+        {/* GoatCounter - Official script from goatcounter.com */}
         <script
-          data-goatcounter={`https://${process.env.NEXT_PUBLIC_GOAT_COUNTER_CODE}.goatcounter.com/count`}
-          data-goatcounter-settings='{"allow_local": true}'
+          data-goatcounter="https://timeinworldclock.goatcounter.com/count"
           async
           src="//gc.zgo.at/count.js"
         />

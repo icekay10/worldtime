@@ -2,19 +2,37 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import GoogleAnalytics from '../components/GoogleAnalytics';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import './globals.css';
 
 export default function App({ Component, pageProps }) {
-  // GoatCounter hook for SPA navigation tracking
-  useAnalytics();
+  const router = useRouter();
+
+  // Handle SPA route changes for GoatCounter
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // Small delay to ensure page title is updated
+      setTimeout(() => {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({
+            path: window.location.pathname + window.location.search,
+            title: document.title
+          });
+        }
+      }, 300);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
 
   return (
     <>
-      {/* Google Analytics Component */}
       <GoogleAnalytics />
-      
-      {/* Your existing layout */}
       <Navbar />
       <main className="app-wrapper">
         <Component {...pageProps} />
