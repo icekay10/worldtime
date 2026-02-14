@@ -1,0 +1,18 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/_error": "pages/_error.js",
+  "/comparisonsummary": "pages/comparisonsummary.html",
+  "/countrycard": "pages/countrycard.html",
+  "/countrysearch": "pages/countrysearch.html",
+  "/countryselector": "pages/countryselector.html",
+  "/timedisplay": "pages/timedisplay.html",
+  "/contact": "pages/contact.js",
+  "/about": "pages/about.js",
+  "/": "pages/index.js",
+  "/policy-page": "pages/policy-page.js",
+  "/world-clock-comparison-tool": "pages/world-clock-comparison-tool.js",
+  "/worldclock-time-zone-converter": "pages/worldclock-time-zone-converter.js",
+  "/global-day-and-night-tracker-world-clock": "pages/global-day-and-night-tracker-world-clock.js"
+}

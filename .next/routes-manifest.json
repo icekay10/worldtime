@@ -1,0 +1,196 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:file((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+)/",
+      "destination": "/:file",
+      "internal": true,
+      "missing": [
+        {
+          "type": "header",
+          "key": "x-nextjs-data"
+        }
+      ],
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/]+\\.\\w+))/$"
+    },
+    {
+      "source": "/:notfile((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+)",
+      "destination": "/:notfile/",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?!\\.well-known(?:/.*)?)(?:[^/]+/)*[^/\\.]+))$"
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/home(?:/)?$"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ],
+      "regex": "^(?:/(.*))(?:/)?$"
+    },
+    {
+      "source": "/images/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ],
+      "regex": "^/images(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    }
+  ],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/404",
+      "regex": "^/404(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/404(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/comparisonsummary",
+      "regex": "^/comparisonsummary(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/comparisonsummary(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/countrycard",
+      "regex": "^/countrycard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/countrycard(?:/)?$"
+    },
+    {
+      "page": "/countrysearch",
+      "regex": "^/countrysearch(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/countrysearch(?:/)?$"
+    },
+    {
+      "page": "/countryselector",
+      "regex": "^/countryselector(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/countryselector(?:/)?$"
+    },
+    {
+      "page": "/global-day-and-night-tracker-world-clock",
+      "regex": "^/global\\-day\\-and\\-night\\-tracker\\-world\\-clock(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/global\\-day\\-and\\-night\\-tracker\\-world\\-clock(?:/)?$"
+    },
+    {
+      "page": "/policy-page",
+      "regex": "^/policy\\-page(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/policy\\-page(?:/)?$"
+    },
+    {
+      "page": "/timedisplay",
+      "regex": "^/timedisplay(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/timedisplay(?:/)?$"
+    },
+    {
+      "page": "/world-clock-comparison-tool",
+      "regex": "^/world\\-clock\\-comparison\\-tool(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/world\\-clock\\-comparison\\-tool(?:/)?$"
+    },
+    {
+      "page": "/worldclock-time-zone-converter",
+      "regex": "^/worldclock\\-time\\-zone\\-converter(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/worldclock\\-time\\-zone\\-converter(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/index\\.json$"
+    },
+    {
+      "page": "/about",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/about\\.json$"
+    },
+    {
+      "page": "/contact",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/contact\\.json$"
+    },
+    {
+      "page": "/global-day-and-night-tracker-world-clock",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/global-day-and-night-tracker-world-clock\\.json$"
+    },
+    {
+      "page": "/policy-page",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/policy-page\\.json$"
+    },
+    {
+      "page": "/world-clock-comparison-tool",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/world-clock-comparison-tool\\.json$"
+    },
+    {
+      "page": "/worldclock-time-zone-converter",
+      "dataRouteRegex": "^/_next/data/\\-gmtBD9GbTiJ3ftuSc_ev/worldclock-time-zone-converter\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
